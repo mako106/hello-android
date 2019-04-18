@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid
+        android:color="@android:color/white">
+    <!--màu sắc trong ảnh -->
+
+    </solid>
+
+    <corners
+        android:radius="5dp">
+
+        <!--//góc-->
+    </corners>
+
+    <stroke
+        android:width="0.1dp"
+        android:color="#000">
+        <!--//độ giày-->
+        <!--màu sắc bo -->
+
+    </stroke>
+
+    <padding
+
+        android:top="10dp"
+        android:right="10dp"
+        android:left="10dp"
+        android:bottom="0dp">
+        <!--//tùy chỉnh  khoảng cách từ ảnh với đơn vị khác-->
+    </padding>
+
+</shape>

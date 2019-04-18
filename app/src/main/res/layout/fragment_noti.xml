@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    tools:context=".Fragment.NotiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".Activity.ListNotificationActivity"
+        android:background="@color/white"
+>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rylayout_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="2dp">
+            <ListView
+                android:background="@color/white"
+                android:id="@+id/lvNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

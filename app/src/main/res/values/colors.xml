@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#7b4bff</color>
+    <color name="colorPrimaryDark">#6539ba</color>
+    <color name="black">#111111</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="bgBottomNavigation">#980110</color>
+    <color name="colorBackground">#2980b9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="signupColor">#066e8a</color>
+    <color name="graylight">#BEBEBE</color>
+    <color name="startblue">#2F4F4F</color>
+    <color name="endblue">#32CD32</color>
+    <color name="transparent">#00000000</color>
+    <color name="transacparent20">#ccffffff</color>
+
+
+</resources>
