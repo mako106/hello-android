@@ -57,11 +57,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(Call<registerResult> call, Response<registerResult> response) {
                 registerResult s = response.body();
-                if (s == null){
-                    Log.d("Error", s.getTitle());
-                    return;
-                }
-                Toast.makeText(RegisterActivity.this, s.getDescription(), Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "register success with email: " + s.getCode(), Toast.LENGTH_LONG).show();
+
                 //chuyeenr page
             }
             @Override

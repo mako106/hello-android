@@ -1,8 +1,8 @@
 package com.example.bottomnavigationdemo.Activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,10 +29,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        edPass = findViewById(R.id.edPass);
-        edUser = findViewById(R.id.edUser);
-        btnLogin = findViewById(R.id.btnLogin);
-        txtRegister = findViewById(R.id.txtRegister);
+        edPass =(EditText) findViewById(R.id.edPass);
+        edUser = (EditText)findViewById(R.id.edUser);
+        btnLogin =(Button) findViewById(R.id.btnLogin);
+        txtRegister =(TextView) findViewById(R.id.txtRegister);
         btnLogin.setOnClickListener(this);
         txtRegister.setOnClickListener(this);
     }
@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 intent.putExtra("USER_NAME", edUser.getText().toString());
                 startActivity(intent);
+
             }
             @Override
             public void onFailure(Call<loginResult> call, Throwable t) {

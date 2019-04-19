@@ -1,56 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroud"
+    android:fillViewport="true"
+    tools:context=".Fragment.HomeFragment">
 
-    tools:context=".Fragment.FeedBackFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/backgroud"
         tools:context=".Activity.FeedBackActivity">
-<android.support.design.widget.TextInputLayout
-    android:id="@+id/txtInLayout1"
-    android:layout_marginTop="20dp"
-    android:layout_centerHorizontal="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:id="@+id/f_edTitle"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Title"
-        android:maxLines="4"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtInLayout1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/f_edTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Title"
+                android:maxLines="4"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-</android.support.design.widget.TextInputLayout>
-<android.support.design.widget.TextInputLayout
-    android:id="@+id/txtInLayout2"
-    android:layout_marginTop="50dp"
-    android:layout_below="@+id/txtInLayout1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:id="@+id/f_edDesFeedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/shapeemail"
-        android:hint="Description"
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:maxLines="12"
-        android:minLines="3"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-</android.support.design.widget.TextInputLayout>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtInLayout2"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/txtInLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/f_edDesFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/shapeemail"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="12"
+                android:minLines="3"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+        </android.support.design.widget.TextInputLayout>
 
 
         <Button
@@ -65,4 +62,5 @@
             android:text="Send" />
 
     </RelativeLayout>
-</FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -24,23 +24,40 @@ import retrofit2.Response;
  */
 public class InfoTrafficFragment extends Fragment implements View.OnClickListener {
 
-
     EditText edEmail,edTitle,edCategory,edDes;
     Button btnSend;
+
+    public InfoTrafficFragment() {
+        // Required empty public constructor
+    }
+
+
+
+    public static InfoTrafficFragment newInstance(String param1, String param2) {
+        InfoTrafficFragment fragment = new InfoTrafficFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_complain, container, false);
+        View view = inflater.inflate(R.layout.fragment_info_traffic, container, false);
         edEmail = (EditText)view.findViewById(R.id.c_edEmail);
         edTitle= (EditText)view.findViewById(R.id.c_edTitle);
         edCategory= (EditText)view.findViewById(R.id.c_edCategory);
         edDes= (EditText)view.findViewById(R.id.c_edDes);
         btnSend= (Button)view.findViewById(R.id.c_btnSend);
         btnSend.setOnClickListener(this);
+
         return view;
     }
-
     private void userComplain() {
         String email = edEmail.getText().toString();
         String title = edTitle.getText().toString();

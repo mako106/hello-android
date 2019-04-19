@@ -25,14 +25,33 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class NotiFragment extends Fragment {
+
+
     ListView lvNew;
     ListNewAdapter adapter;
     List<Notification> listNotification = new ArrayList<>();
+
+    public NotiFragment() {
+
+    }
+
+    public static NotiFragment newInstance(String param1, String param2) {
+        NotiFragment fragment = new NotiFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_noti, container, false);
+
         lvNew = (ListView) view.findViewById(R.id.lvNotification);
         parserListNews();
 
@@ -54,6 +73,7 @@ public class NotiFragment extends Fragment {
             }
         });
     }
+
 
 
 }

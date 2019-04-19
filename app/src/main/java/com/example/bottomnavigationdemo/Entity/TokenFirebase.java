@@ -6,9 +6,11 @@ public class TokenFirebase {
 
     private String token;
 
+
     public TokenFirebase() {
 
     }
+
 
     public String getToken() {
         return token;
