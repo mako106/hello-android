@@ -1,135 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    tools:context=".Fragment.InfoTrafficFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:sothree="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/backgroud"
-        android:padding="1dp"
-        tools:context=".Activity.ComplainActivity"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            android:layout_marginTop="80dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:text="Email:"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-
-            <EditText
-                android:id="@+id/c_edEmail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:ems="10"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:text="Title:"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-
-            <EditText
-                android:id="@+id/c_edTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:ems="10"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:text="Category:"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-
-            <EditText
-                android:id="@+id/c_edCategory"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:ems="10"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:text="Description:"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-            <EditText
-                android:id="@+id/c_edDes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.75"
-                android:ems="10"
-                android:textColor="@color/white"/>
-        </LinearLayout>
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/c_btnSend"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_complain"
-                android:layout_marginLeft="50dp"
-                android:text="Send"
-                android:textStyle="bold"
-                android:gravity="center_horizontal"
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                android:layout_marginRight="50dp"/>
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    android:background="@android:color/transparent">
 
-        </LinearLayout>
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        android:minHeight="?attr/actionBarSize"
+                        android:layout_width="match_parent"
+                        app:titleTextColor="@color/grey"
+                        android:background="@android:color/white"
+                        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                    </android.support.v7.widget.Toolbar>
 
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+                </android.support.design.widget.AppBarLayout>
+
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    sothree:context=".Fragment.InfoTrafficFragment" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_my_location_black_24dp"
+                    app:elevation="6dp"
+                    app:pressedTranslationZ="12dp"
+                    app:layout_anchor="@id/map"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="66dp"
+                    app:backgroundTint="#ffffff"
+                    app:layout_anchorGravity="bottom|right|end"
+                    >
+
+                </android.support.design.widget.FloatingActionButton>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </FrameLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <include layout="@layout/bottomsheet_layout"></include>
+
+</android.support.design.widget.CoordinatorLayout>
+

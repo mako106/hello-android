@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hinhnen1"
+    android:background="@drawable/bg_1"
     android:orientation="vertical"
     tools:context=".Activity.LoginActivity">
 
@@ -69,7 +69,7 @@
                 android:drawableLeft="@drawable/person"
                 android:drawablePadding="10dp"
                 android:hint="Email"
-                android:text="quanglinh@admin.com"
+                android:text="hung@admin.com"
                 android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/black"
@@ -86,7 +86,7 @@
                 android:drawableLeft="@drawable/lock"
                 android:drawablePadding="10dp"
                 android:hint="Password"
-                android:text="admin1234"
+                android:text="hungdung"
                 android:inputType="textPassword"
                 android:padding="15dp"
                 android:textColor="@color/black"
@@ -121,6 +121,20 @@
                 android:textColor="@color/black" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pB_login"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:indeterminateTint="@color/white"
+        android:progressDrawable="@drawable/circular_process_bar"
+
+
+        />
 
 
 </RelativeLayout>

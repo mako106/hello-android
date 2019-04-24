@@ -14,4 +14,15 @@
     <color name="endblue">#32CD32</color>
     <color name="transparent">#00000000</color>
     <color name="transacparent20">#ccffffff</color>
+    <color name="grey">#8c8c8c</color>
+
+
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
 </resources>

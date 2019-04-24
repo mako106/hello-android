@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText edUser, edPass;
     Button btnLogin;
     TextView txtRegister;
+    ProgressBar spinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         txtRegister =(TextView) findViewById(R.id.txtRegister);
         btnLogin.setOnClickListener(this);
         txtRegister.setOnClickListener(this);
+        spinner=(ProgressBar)findViewById(R.id.pB_login);
+        spinner.setVisibility(View.GONE);
+
     }
 
     private void userLogin() throws IOException {
@@ -52,6 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onResponse(Call<loginResult> call, Response<loginResult> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText(LoginActivity.this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
+                    spinner.setVisibility(View.GONE);
                     return;
                 }
                 loginResult l = response.body();
@@ -78,6 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                spinner.setVisibility(View.VISIBLE);
                 break;
             case R.id.txtRegister:
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

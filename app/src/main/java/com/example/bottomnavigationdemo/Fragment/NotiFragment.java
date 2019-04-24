@@ -65,6 +65,7 @@ public class NotiFragment extends Fragment {
                 listNotification = response.body();
                 adapter = new ListNewAdapter(listNotification, NotiFragment.this);
                 adapter.reloadData(listNotification);
+
                 lvNew.setAdapter(adapter);
             }
             @Override

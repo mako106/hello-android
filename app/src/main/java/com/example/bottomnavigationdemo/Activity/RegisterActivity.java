@@ -3,7 +3,6 @@ package com.example.bottomnavigationdemo.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +21,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     EditText  edEmail, edPass, edComfirmPass;
     Button btnRegister;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             public void onResponse(Call<registerResult> call, Response<registerResult> response) {
                 registerResult s = response.body();
                 Toast.makeText(RegisterActivity.this, "register success with email: " + s.getCode(), Toast.LENGTH_LONG).show();
-
                 //chuyeenr page
             }
             @Override

@@ -26,7 +26,6 @@ import com.example.bottomnavigationdemo.API.RetrofitClient;
 import com.example.bottomnavigationdemo.Adapter.BottomNavigationBehavior;
 import com.example.bottomnavigationdemo.Entity.TokenFirebase;
 import com.example.bottomnavigationdemo.Fragment.FeedBackFragment;
-import com.example.bottomnavigationdemo.Fragment.HomeFragment;
 import com.example.bottomnavigationdemo.Fragment.InfoTrafficFragment;
 import com.example.bottomnavigationdemo.Fragment.NotiFragment;
 import com.example.bottomnavigationdemo.Fragment.ProfileFragment;
@@ -53,10 +52,6 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity   {
 
     private static final String TAG = "MyFirebaseMsgService";
-    private static final String TAG_Google = "GoogleAPI";
-    private static final int ERROR_DIALOG_REQUEST = 9001;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,13 +107,8 @@ public class MainActivity extends AppCompatActivity   {
         layoutParams.setBehavior(new BottomNavigationBehavior());
 
         // load the store fragment by default
-        loadFragment(new NotiFragment());
+        loadFragment(new InfoTrafficFragment());
     }
-
-
-
-
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -126,10 +116,6 @@ public class MainActivity extends AppCompatActivity   {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    fragment = new HomeFragment();
-                    loadFragment(fragment);
-                    return true;
                 case R.id.navigation_infoTraffic:
                     fragment = new InfoTrafficFragment();
                     loadFragment(fragment);
@@ -147,11 +133,9 @@ public class MainActivity extends AppCompatActivity   {
                     loadFragment(fragment);
                     return true;
             }
-
             return false;
         }
     };
-
     /**
      * loading fragment into FrameLayout
      *
@@ -164,7 +148,4 @@ public class MainActivity extends AppCompatActivity   {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
-
-
 }
